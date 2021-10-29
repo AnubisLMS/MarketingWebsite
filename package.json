@@ -1,0 +1,38 @@
+{
+  "name": "about",
+  "version": "1.0.0",
+  "description": "Official Anubis Website",
+  "author": "Anubis",
+  "license": "MIT",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "cntl": "^1.0.0",
+    "gatsby": "^3.13.1",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^1.14.1",
+    "gatsby-plugin-react-helmet": "^4.14.0",
+    "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-sharp": "^3.14.1",
+    "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-transformer-sharp": "^3.14.0",
+    "react": "^17.0.1",
+    "react-compare-slider": "^2.1.0",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "gatsby-plugin-postcss": "^4.14.0",
+    "postcss": "^8.3.9",
+    "tailwindcss": "^2.2.16"
+  }
+}

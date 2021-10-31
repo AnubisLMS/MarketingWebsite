@@ -5,7 +5,7 @@ import heroImage from '../../images/heroImage.png';
 
 const Hero = () => {
   return (
-    <div className='w-full mt-20 pt-2xl pb-2xl relative'>
+    <div className='w-full mt-52 pt-2xl pb-2xl relative'>
       <img src={heroImage} className='absolute right-5 -top-10 w-6/12'/>
       <div className='w-7/12 flex flex-col space-y-10'>
         <div className='space-y-4'>

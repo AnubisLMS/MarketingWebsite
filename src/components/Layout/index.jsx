@@ -3,9 +3,17 @@ import cntl from 'cntl';
 
 import Header from '../Header';
 import Footer from '../Footer';
+import NotificationBar from "../NotificationBar";
 // import GetStartedModal from '../GetStartedModal';
 
 const root = cntl`
+w-screen
+flex
+flex-col
+items-center
+justify-center
+`;
+const content = cntl`
     max-w-max
     text-white
     text-base
@@ -16,10 +24,16 @@ const root = cntl`
 const Layout = ({ children }) => {
   return (
     <div className={root}>
+      <NotificationBar
+        content='The Anubis LMS Application has a new look!'
+        link='/blog/rebrand'
+      />
       <Header />
-      <main>{children}</main>
-      <Footer />
-      {/*<GetStartedModal />*/}
+      <div className={content}>
+        <main>{children}</main>
+        <Footer />
+        {/*<GetStartedModal />*/}
+      </div>
     </div>
   )
 }

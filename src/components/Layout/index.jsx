@@ -1,5 +1,7 @@
 import React from 'react';
 import cntl from 'cntl';
+import {Helmet} from 'react-helmet';
+import logo from '../../images/Logo.png';
 
 import Header from '../Header';
 import Footer from '../Footer';
@@ -21,17 +23,22 @@ const content = cntl`
 `;
 
 
-const Layout = ({ children }) => {
+const Layout = ({children}) => {
   return (
     <div className={root}>
+      <Helmet>
+        <meta charSet="utf-8"/>
+        <title>Anubis LMS</title>
+        <link rel="shortcut icon" href={logo} type="image/png" />
+      </Helmet>
       <NotificationBar
         content='The Anubis LMS Application has a new look!'
         link='/blog/rebrand'
       />
-      <Header />
+      <Header/>
       <div className={content}>
         <main>{children}</main>
-        <Footer />
+        <Footer/>
         {/*<GetStartedModal />*/}
       </div>
     </div>

@@ -21,10 +21,10 @@ module.exports = {
     },
     extend: {
       maxWidth: {
-        max: '1400px',
+        max: '1200px',
       },
       width: {
-        'max': '1400px',
+        'max': '1200px',
       },
       fontSize: {
         'base-smaller': '12px',

@@ -9,7 +9,7 @@ import NotificationBar from "../NotificationBar";
 // import GetStartedModal from '../GetStartedModal';
 
 const root = cntl`
-w-screen
+max-w-screen
 flex
 flex-col
 items-center

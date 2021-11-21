@@ -7556,24 +7556,24 @@ module.exports = withSideEffect;
 /***/ }),
 
 /***/ "react-dom/server":
-/*!**********************************************************************************************!*\
-  !*** external "/home/nysteo/dev/anubis/anubis-lms-website/node_modules/react-dom/server.js" ***!
-  \**********************************************************************************************/
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("/home/nysteo/dev/anubis/anubis-lms-website/node_modules/react-dom/server.js");
-
-/***/ }),
-
-/***/ "react":
 /*!*****************************************************************************************!*\
-  !*** external "/home/nysteo/dev/anubis/anubis-lms-website/node_modules/react/index.js" ***!
+  !*** external "/home/nysteo/dev/anubis/AnubisWebsite/node_modules/react-dom/server.js" ***!
   \*****************************************************************************************/
 /***/ ((module) => {
 
 "use strict";
-module.exports = require("/home/nysteo/dev/anubis/anubis-lms-website/node_modules/react/index.js");
+module.exports = require("/home/nysteo/dev/anubis/AnubisWebsite/node_modules/react-dom/server.js");
+
+/***/ }),
+
+/***/ "react":
+/*!************************************************************************************!*\
+  !*** external "/home/nysteo/dev/anubis/AnubisWebsite/node_modules/react/index.js" ***!
+  \************************************************************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("/home/nysteo/dev/anubis/AnubisWebsite/node_modules/react/index.js");
 
 /***/ })
 

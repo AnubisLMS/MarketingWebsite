@@ -11,9 +11,11 @@ const Header = () => {
           <Nav />
         </div>
         <div>
-          <button className='pb-sm pt-sm pl-md pr-md bg-primary rounded-sm hover:opacity-90'>
-            Sign In
-          </button>
+          <a href="https://anubis.osiris.services/api/public/auth/login">
+            <button className='pb-sm pt-sm pl-md pr-md bg-primary rounded-sm hover:opacity-90'>
+              Sign In
+            </button>
+          </a>
         </div>
       </div>
     </div>

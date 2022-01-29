@@ -11,7 +11,9 @@ const Home = () => {
   return (
     <Layout>
       <Hero />
+      <div id='educators'/>
       <WithWithout />
+      <div id='students'/>
       <AppBlocks />
       <CommunityShowcase />
       <InterestedBlock />

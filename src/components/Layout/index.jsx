@@ -31,10 +31,10 @@ const Layout = ({children}) => {
         <title>Anubis LMS</title>
         <link rel="shortcut icon" href={logo} type="image/png" />
       </Helmet>
-      <NotificationBar
-        content='The Anubis LMS Application has a new look!'
-        link='/blog/rebrand'
-      />
+      {/*<NotificationBar*/}
+      {/*  content='The Anubis LMS Application has a new look!'*/}
+      {/*  link='/blog/rebrand'*/}
+      {/*/>*/}
       <Header/>
       <div className={content}>
         <main>{children}</main>

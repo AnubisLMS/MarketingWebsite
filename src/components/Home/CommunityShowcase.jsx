@@ -46,7 +46,7 @@ const classes = {
   stat: 'col-span-3',
   statTitle: 'text-5xl font-bold',
   statDesc: 'text-2xl text-gray',
-  resource: 'col-span-6 space-y-2 bg-gray-3 w-full rounded-md pt-md pb-md pr-lg pl-lg cursor-pointer hover:opacity-80',
+  resource: 'sm:col-span-12 md:col-span-6 space-y-2 bg-gray-3 w-full rounded-md pt-md pb-md pr-lg pl-lg cursor-pointer hover:opacity-80',
   resourceTag: 'text-xl text-primary',
   resourceTitle: 'text-3xl font-semibold',
   resourceDesc: 'text-lg text-gray',

@@ -52,7 +52,15 @@ Under Anubis each student gets their own github repo for each assignment. When t
 push and runs tests on their code. The results are then available to students on the Anubis website _before the deadline_
 Under this model students can push as many times as they would like before the assignment deadline.
 
-![alt docs/img/autograde-results.png](docs/design-tex/figures/autograde-results.png)
+<p align="center">
+    <img
+      src="https://raw.githubusercontent.com/AnubisLMS/Anubis/master/docs/design-tex/figures/autograde-results.png"
+      width="1000"
+      height="600"
+    />
+</p>
+
+<!-- ![alt docs/img/autograde-results.png](docs/design-tex/figures/autograde-results.png) -->
 
 > _If you would like to read more on how autograding and assignment management works from a TA/Professors
 > perspective, check out our [detailed design doc](docs/README.md)_
@@ -65,7 +73,15 @@ No more clunky cloud VM solutions, or spending the first several weeks of the cl
 of student laptops. Students do not need to install, or configure anything for Anubis. Everything is accessible in 
 the browser.
 
-![alt docs/img/theia-fullscreen.png](docs/design-tex/figures/theia-fullscreen.png)
+<!-- ![alt docs/img/theia-fullscreen.png](docs/design-tex/figures/theia-fullscreen.png) -->
+<p align="center">
+    <img
+      src="https://raw.githubusercontent.com/AnubisLMS/Anubis/master/docs/design-tex/figures/theia-fullscreen.png"
+      width="1000"
+      height="600"
+    />
+</p>
+
 
 > _If you would like a more detailed description of how the IDEs work internally, check out the 
 > [sections on the IDEs in our design doc](docs/README.md)_ 

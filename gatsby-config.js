@@ -27,10 +27,10 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `markdown-pages`,
-        path: `./src/markdown-pages`,
+        name: 'pages',
+        path: './src/pages/',
       },
     },
   ],

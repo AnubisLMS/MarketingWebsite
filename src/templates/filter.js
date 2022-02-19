@@ -1,6 +1,32 @@
 // Get blog based on search criteria
 // Using react-router-dom
 
+// Adding react hooks 
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+// Aaron, Devin, do we need to use react for this
+// const [searchInput, setSearchInput] = useState('');
+
+// const searchBlogs = (searchKeyword) => {
+//     setSearchInput(searchKeyword);
+// }
+
+// Get documents from blog ./src/blog folder. Return list of titles 
+const blogFolder = "./src/blog";
+const fs = require('fs');
+
+function getBlogFromBlogFolder(){
+    var blogList = []; 
+    fs.readdir(blogFolder, (err, files) => {
+        files.forEach(file => {
+            blogList.push(file);
+            console.log(file);
+        });
+    });
+    return blogList 
+}
+
 function getAllBlogs(){
     var path = "/blogs"; // Assume all blogs are in the root directory
     return fetch(path, {
@@ -33,3 +59,6 @@ function filterBlogs(filterTerm, blogTitles){
     }
     return filteredBlogTitles;
 }
+
+export default getAllBlogs;
+export default filterBlogs;

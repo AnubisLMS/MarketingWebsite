@@ -8,5 +8,6 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #0D1117;
+    /* background-color: #ffffff; */
     font-family: "Work Sans", sans-serif;
 }

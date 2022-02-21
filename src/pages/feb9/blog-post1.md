@@ -3,9 +3,11 @@ path: '/first-post'
 title: 'First Blog Post'
 ---
 
-<span>
+<span style = "color:white">
 
-# Anubis LMS
+<h1 align = "left" style = "font-size:30px"> Anubis LMS </h1>
+
+<br>
 
 <p align="center">
   <a href="https://anubis.osiris.services/">
@@ -17,25 +19,37 @@ title: 'First Blog Post'
   </a>
 </p>
 
-# Table of contents
+<br>
+
+<h1 align = "left" style = "font-size:30px"> Table of Contents </h1>
+
+<ul style = "margin:0px 0px 0px 20px; font-size:20px">
 
 * [Design and Internals](#design-and-internals)
 * [Blog](#blog)
 * [What is this project?](#what-is-this-project?)
-  * [Autograding](#autograding)
-  * [Anubis Cloud IDEs](#anubis-cloud-ides)
-  * [Insights](#insights)
+    <ul style = "margin:0px 0px 0px 40px">
+
+    * [Autograding](#autograding)   
+    * [Anubis Cloud IDEs](#anubis-cloud-ides)  
+    * [Insights](#insights) 
+    
+    </ul>
 * [How to contribute](#how-to-contribute)
 * [Further reading](#further-reading)
 * [License](#license)
 
+</ul>
 
-## Design and Internals 
+<br>
 
+<h2 align = "left" style = "font-size:25px" > Design and Internals </h2> 
+<span align = "left" style = "margin:0px 0px 0px 20px">
 Want to know how Anubis works internally? We have a 20+ page design doc that thoroughly explains how Anubis works 
 under [our docs](./docs). Don't worry, there are a lot of pictures :)
+</span>
 
-## Blog
+<h2 align = "left" style = "font-size: 25px"> Blog </h2>
 
 Be sure to check out our [blog](https://anubis.osiris.services/blog)!
 

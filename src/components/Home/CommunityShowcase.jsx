@@ -72,7 +72,18 @@ const resources = [
     tag: 'Usage',
     title: 'Educator Usage Guide',
     description: 'Just started using Anubis for your course? Need a refresh? Read this and get the basics on how to set your students up for sucess',
+  },
+  {
+  tag: 'Usage',
+    title: 'Educator Usage Guide',
+    description: 'Just started using Anubis for your course? Need a refresh? Read this and get the basics on how to set your students up for sucess',
+  },
+  {
+    tag: 'Usage',
+    title: 'Educator Usage Guide',
+    description: 'Just started using Anubis for your course? Need a refresh? Read this and get the basics on how to set your students up for sucess',
   }
+
 ]
 
 const stats = [

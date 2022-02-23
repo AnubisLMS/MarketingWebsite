@@ -1,14 +1,11 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import { graphql } from "gatsby"
 
-const Blog = () => {
-  const BlogPost = () => {
-    return (
-      <div>
 
-      </div>
-    )
-  }
+
+const Blog = ({ data, location }) => {
+  console.log(pageQuery)
   return (
     <Layout>
       <div className='w-max'>
@@ -21,7 +18,20 @@ const Blog = () => {
         </div>
       </div>
     </Layout>
-  )
-}
+    )
+  }
 
 export default Blog;
+
+export const pageQuery = graphql`
+  query MyQuery {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          path
+          title
+        }
+      }
+    }
+  }
+`

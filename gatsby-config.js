@@ -25,5 +25,13 @@ module.exports = {
       },
       __key: "images",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `./content/blog`,
+        name: `blog`,
+      }
+    },
+    "gatsby-transformer-remark"
   ],
 };

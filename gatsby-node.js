@@ -13,6 +13,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             node {
               frontmatter {
                 path
+                title
+                date
+                description
               }
             }
           }
@@ -28,7 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Create pages for each markdown file.
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    const path = node.frontmatter.path
+    const path = `/blog/${node.frontmatter.path}`
     createPage({
       path,
       component: blogPostTemplate,

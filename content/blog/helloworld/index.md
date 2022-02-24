@@ -1,6 +1,8 @@
 ---
-path: "/{placeholder}/helloworld"
+path: "helloworld"
+title: "Hello World"
+date: "Wednesday"
+description: "Hello Description"
 ---
 
-<h1>Test<h1>
-Just a test!
+Hello-World!

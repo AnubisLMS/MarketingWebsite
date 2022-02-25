@@ -1,7 +1,7 @@
 ---
-path: "helloworld"
+slug: "/helloworld"
 title: "Hello World"
-date: "Wednesday"
+date: "02/25/2022"
 description: "Hello Description"
 ---
 

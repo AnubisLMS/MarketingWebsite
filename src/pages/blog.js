@@ -4,15 +4,12 @@ import { Link, graphql } from "gatsby"
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
-  console.log(posts)
 
   if (posts.length === 0) {
     return (
       <Layout>
         <p>
-          No blog posts found. Add markdown posts to "content/blog" (or the
-          directory you specified for the "gatsby-source-filesystem" plugin in
-          gatsby-config.js).
+         Sorry, no blogs to be found!
         </p>
       </Layout>
     )
@@ -31,12 +28,10 @@ const Blog = ({ data }) => {
         <div>
           <ol style={{ listStyle: `none` }}>
           {posts.map(post => {
-            const title = post.frontmatter.title
-            const date = post.frontmatter.date
-            const description = post.frontmatter.description
+            const {title, date, description} = post.frontmatter
 
             return (
-              <li key={post.frontmatter.path}>
+              <li key={post.frontmatter.slug}>
                 <article
                   className="post-list-item"
                   itemScope
@@ -44,7 +39,7 @@ const Blog = ({ data }) => {
                 >
                   <header>
                     <h2>
-                      <Link to={`/blog/${post.frontmatter.path}`} itemProp="url">
+                      <Link to={`/blog/${post.frontmatter.slug}`} itemProp="url">
                         <span itemProp="headline">{title}</span>
                         <span itemProp="headline">{date}</span>
                         <span itemProp="headline">{description}</span>
@@ -69,7 +64,7 @@ query MyQuery {
     nodes {
       rawMarkdownBody
       frontmatter {
-        path
+        slug
         title
         date
         description

@@ -1,12 +1,16 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import {useState} from 'react';
+import JSONDATA from './test_data.json'
 
-// Let's assume that we have a list of blog titles that are passed in 
-const blogTitles = ["Anubis Development Guide", "Anubis Contributor Guide", "Anubis User Guide", 
-"Student User Manual", "Faculty User Manual", "Navigation Information", "Celebrating the 20th Anniversary of Anubis", 
-"Bug Fixes and Updates", "New Features and Updates", "Announcements", "2022 Look Ahead"]; 
 
+//Added JSON dummy data to test the search bar.  
+const blogTitles = []
+JSONDATA.map((val,key) => {
+  blogTitles.push(val['Blog Title']);  
+})
+
+console.log(blogTitles)
 // filterBlogs takes in a term to filter for and a list of all blogs. 
 // It performs a case insensitive search on the title of the blog and returns
 // a list of blogs that match the filter term. If no blogs are found, it return nothing. 

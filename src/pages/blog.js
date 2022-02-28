@@ -2,39 +2,12 @@ import React from 'react';
 import Layout from '../components/Layout';
 import {useState} from 'react';
 import { Link, graphql} from "gatsby";
-import JSONDATA from './test_data.json'
-
-
-//Added JSON dummy data to test the search bar.  
-const blogTitles = []
-JSONDATA.map((val,key) => {
-  blogTitles.push(val['Blog Title']);  
-})
-
-console.log(blogTitles)
-// filterBlogs takes in a term to filter for and a list of all blogs. 
-// It performs a case insensitive search on the title of the blog and returns
-// a list of blogs that match the filter term. If no blogs are found, it return nothing. 
-
-function filterBlogs(searchTerm, blogTitles){
-    var filteredBlogTitles = []; 
-    for (var i = 0; i < blogTitles.length; i++){
-        if (blogTitles[i].toLowerCase().includes(searchTerm.toLowerCase())){
-            filteredBlogTitles.push(blogTitles[i]);
-        }
-    }
-    return filteredBlogTitles;
-}
-
+// import JSONDATA from './test_data.json'
 
 const Blog = ({data}) => {
   const posts = data.allMarkdownRemark.nodes
 
   const [searchInput, setSearchInput] = useState('');
-  var filteredBlogsList = filterBlogs(searchInput, blogTitles);
-  let filteredBlogs = filteredBlogsList.map((item,index)=>{
-    return <li key={index}>{item}</li>
-  })
 
   return (
     <Layout>
@@ -49,17 +22,12 @@ const Blog = ({data}) => {
                 class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-black bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-black focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon3"/>
             </div>
           </div>
-          <ul>
-            {filteredBlogs}
-          </ul>
         </div>
         <div className='flex flex-col items-center'> </div>
       </div>
       <div>
         <ol style = {{listStyle: 'none'}}>
-          {posts.map(post => {
-            const {title, date, description} = post.frontmatter
-            return (
+          {posts.filter(post => post.frontmatter.title.toLowerCase().includes(searchInput.toLowerCase())).map(post => (
               <li key = {post.frontmatter.slug}>
                 <article 
                   className = "post-list-item"
@@ -68,7 +36,7 @@ const Blog = ({data}) => {
                     <header>
                       <h2>
                         <Link to={`/blog/${post.frontmatter.slug}`} itemProp="url">
-                          <span itemProp="headline">{title}</span>
+                          <span itemProp="headline">{post.frontmatter.title}</span>
                           {/* <span itemProp="headline">{date}</span>
                           <span itemProp="headline">{description}</span> */}
                         </Link>
@@ -76,8 +44,7 @@ const Blog = ({data}) => {
                     </header>
                 </article>
               </li>
-            )
-          })}
+          ))}
         </ol>
       </div>
     </Layout>

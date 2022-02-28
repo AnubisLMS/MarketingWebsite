@@ -1,14 +1,15 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { Link, graphql} from "gatsby";
 // import JSONDATA from './test_data.json'
 
+
 const Blog = ({data}) => {
   const posts = data.allMarkdownRemark.nodes
-
   const [searchInput, setSearchInput] = useState('');
-
+  const [filteredBlogs, setFilteredBlogs] = useState(undefined);
+  
   return (
     <Layout>
       <div className='sm:w-fit lg:w-max'>
@@ -18,8 +19,8 @@ const Blog = ({data}) => {
           <div class="mb-3 xl:w-96">
           <div class="input-group relative flex flex-wrap items-stretch w-full mb-4">
               <input type="Search for Blog" onChange = {(e) => { 
-                setSearchInput(e.target.value); }}
-                class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-black bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-black focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon3"/>
+                setSearchInput(e.target.value); setFilteredBlogs(filteredBlogs)}}
+                class="w-full p-3 bg-gray-3 border border-gray-2 rounded-sm" placeholder="Search" aria-label="Search" aria-describedby="button-addon3"/>
             </div>
           </div>
         </div>
@@ -35,10 +36,8 @@ const Blog = ({data}) => {
                   itemType = "http://schema.org/Article">
                     <header>
                       <h2>
-                        <Link to={`/blog/${post.frontmatter.slug}`} itemProp="url">
+                        <Link to={`/blog${post.frontmatter.slug}`} itemProp="url">
                           <span itemProp="headline">{post.frontmatter.title}</span>
-                          {/* <span itemProp="headline">{date}</span>
-                          <span itemProp="headline">{description}</span> */}
                         </Link>
                       </h2>
                     </header>

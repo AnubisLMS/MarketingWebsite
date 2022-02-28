@@ -26,31 +26,30 @@ const Blog = ({ data }) => {
           <div/>
         </div>
         <div>
-          <ol style={{ listStyle: `none` }}>
+          
           {posts.map(post => {
             const {title, date, description} = post.frontmatter
 
             return (
-              <li key={post.frontmatter.slug}>
-                <article
-                  className="post-list-item"
-                  itemScope
-                  itemType="http://schema.org/Article"
-                >
-                  <header>
-                    <h2>
-                      <Link to={`/blog/${post.frontmatter.slug}`} itemProp="url">
-                        <span itemProp="headline">{title}</span>
-                        <span itemProp="headline">{date}</span>
-                        <span itemProp="headline">{description}</span>
-                      </Link>
-                    </h2>
-                  </header>
-                </article>
-              </li>
+              
+              <header>
+                <li>
+                <h2>
+                  <Link to={`/blog/${post.frontmatter.slug}`} itemProp="url">
+                    <span itemProp="headline">{title}</span>
+                  </Link>
+                </h2>
+                    <span itemProp="date">{date}</span>
+                    <p>
+                    <span itemProp="description">{description}</span>
+                    </p>
+                  
+                </li>
+              </header>
+              
             )
           })}
-        </ol>
+        
         </div>
       </div>
     </Layout>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import {useState} from 'react';
+import { Link, graphql} from "gatsby";
 
 // Let's assume that we have a list of blog titles that are passed in 
 const blogTitles = ["Anubis Development Guide", "Anubis Contributor Guide", "Anubis User Guide", 
@@ -12,7 +13,6 @@ const blogTitles = ["Anubis Development Guide", "Anubis Contributor Guide", "Anu
 // a list of blogs that match the filter term. If no blogs are found, it return nothing. 
 
 function filterBlogs(searchTerm, blogTitles){
-  
     var filteredBlogTitles = []; 
     for (var i = 0; i < blogTitles.length; i++){
         if (blogTitles[i].toLowerCase().includes(searchTerm.toLowerCase())){
@@ -23,11 +23,8 @@ function filterBlogs(searchTerm, blogTitles){
 }
 
 
-const Blog = () => {
-  
-  const searchItems = (searchValue) => {
-    setSearchInput(searchValue);
-  }
+const Blog = ({data}) => {
+  const posts = data.allMarkdownRemark.nodes
 
   const [searchInput, setSearchInput] = useState('');
   var filteredBlogsList = filterBlogs(searchInput, blogTitles);
@@ -44,7 +41,7 @@ const Blog = () => {
           <div class="mb-3 xl:w-96">
           <div class="input-group relative flex flex-wrap items-stretch w-full mb-4">
               <input type="Search for Blog" onChange = {(e) => { 
-                searchItems(e.target.value); }}
+                setSearchInput(e.target.value); }}
                 class="form-control relative flex-auto min-w-0 block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-black bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-black focus:border-blue-600 focus:outline-none" placeholder="Search" aria-label="Search" aria-describedby="button-addon3"/>
             </div>
           </div>
@@ -52,12 +49,50 @@ const Blog = () => {
             {filteredBlogs}
           </ul>
         </div>
-        <div className='flex flex-col items-center'>
-          <div/>
-        </div>
+        <div className='flex flex-col items-center'> </div>
+      </div>
+      <div>
+        <ol style = {{listStyle: 'none'}}>
+          {posts.map(post => {
+            const {title, date, description} = post.frontmatter
+            return (
+              <li key = {post.frontmatter.slug}>
+                <article 
+                  className = "post-list-item"
+                  itemScope
+                  itemType = "http://schema.org/Article">
+                    <header>
+                      <h2>
+                        <Link to={`/blog/${post.frontmatter.slug}`} itemProp="url">
+                          <span itemProp="headline">{title}</span>
+                          {/* <span itemProp="headline">{date}</span>
+                          <span itemProp="headline">{description}</span> */}
+                        </Link>
+                      </h2>
+                    </header>
+                </article>
+              </li>
+            )
+          })}
+        </ol>
       </div>
     </Layout>
   )
 }
 
 export default Blog;
+export const pageQuery = graphql`
+query MyQuery {
+  allMarkdownRemark {
+    nodes {
+      rawMarkdownBody
+      frontmatter {
+        slug
+        title
+        date
+        description
+      }
+    }
+  }
+}
+`

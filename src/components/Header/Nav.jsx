@@ -9,8 +9,6 @@ const Nav = () => {
       <NavItem path={'/#students'}>For Students</NavItem>
       <NavItem path={'/blog'}>Blog</NavItem>
       <NavItem path={'/community'}>Community</NavItem>
-      <NavItem path={'/userstories'}>User Stories</NavItem>
-      {/* <NavItem path={'/markdown_pages'}> MarkDown Pages </NavItem> */}
     </div>
   )
 }

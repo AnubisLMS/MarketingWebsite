@@ -8,7 +8,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-    "gatsby-transformer-remark",
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -27,11 +26,12 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'pages',
-        path: './src/pages/',
-      },
+        path: `./content/blog`,
+        name: `blog`,
+      }
     },
+    "gatsby-transformer-remark"
   ],
 };

@@ -1,9 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { Link, graphql} from "gatsby";
-// import JSONDATA from './test_data.json'
-
 
 const Blog = ({data}) => {
   const posts = data.allMarkdownRemark.nodes

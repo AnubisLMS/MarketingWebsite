@@ -20,7 +20,7 @@ const Community = () => {
     <Layout>
       {repo &&
         <>
-          <div className='w-max mt-52'>
+          <div className='w-fit mt-52'>
             <div className='w-full flex flex-col rounded-md space-y-3'>
               <p className='text-primary text-xl'>THE ANUBIS COMMUNITY</p>
               <h1 className='text-4xl font-bold'>Students Supporting Students</h1>
@@ -78,7 +78,7 @@ const Community = () => {
 }
 
 const classes = {
-  resource: 'col-span-6 space-y-2 bg-gray-3 w-full rounded-md pt-md pb-md pr-lg pl-lg cursor-pointer hover:opacity-80',
+  resource: 'col-span-6 sm: col-span-12 md:col-span-6 space-y-2 bg-gray-3 w-full rounded-md pt-md pb-md pr-lg pl-lg cursor-pointer hover:opacity-80',
   resourceTag: 'text-xl text-primary',
   resourceTitle: 'text-3xl font-semibold',
   resourceDesc: 'text-lg text-gray',
@@ -96,6 +96,18 @@ const resources = [
     title: 'Development Guide',
     description: 'A guide on how you can get Anubis running locally, and how to make choose and solve issues.',
     href: 'https://github.com/AnubisLMS/Anubis/blob/master/docs/development_guide.md',
+  },
+  {
+    tag: 'Community',
+    title: 'Community Forums',
+    description: 'A platform to discuss issues and solutions about Anubis. CURRENTLY CAMPUSWIRE SERVES AS PLACEHOLDER.',
+    href: 'https://campuswire.com/',
+  },
+  {
+    tag: 'Community',
+    title: 'React Guide',
+    description: 'A Guide on the intricacies of React, which is essential for Anubis development',
+    href: 'https://reactjs.org/docs/getting-started.html',
   },
   // {
   //   tag: 'Usage',

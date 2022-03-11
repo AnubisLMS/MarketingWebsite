@@ -26,6 +26,7 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-sharp": "^3.14.1",
     "gatsby-source-filesystem": "^3.14.0",
+    "gatsby-transformer-remark": "^5.6.0",
     "gatsby-transformer-sharp": "^3.14.0",
     "react": "^17.0.1",
     "react-compare-slider": "^2.1.0",

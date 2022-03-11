@@ -5,7 +5,7 @@ import Logo from '../Logo';
 const Header = () => {
   return (
     <div className='w-full flex flex-row justify-center items-center pt-lg pb-lg border-b-2 border-gray-3 fixed top-0 bg-black z-30'>
-      <div className='w-max flex flex-row justify-between items-center text-white'>
+      <div className='lg:w-max md:w-fit sm:w-min flex flex-row justify-between items-center text-white'>
         <div className='flex flex-row items-center space-x-10 justify-center'>
           <Logo />
           <Nav />

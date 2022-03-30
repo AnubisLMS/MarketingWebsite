@@ -28,12 +28,12 @@ export default Stats;
 
 const stats = [
   {
-    title: '800+',
+    title: '1000+',
     description: 'Students Coding.',
     iconIndex: 0,
   },
   {
-    title: '7+',
+    title: '8+',
     description: 'Courses Registered.',
     iconIndex: 1,
   },

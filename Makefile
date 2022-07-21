@@ -14,5 +14,5 @@ build:
 	docker build -t $(IMAGE):$(TAG) .
 
 .PHONY: push       # Push docker image
-push: build
+push:
 	docker push $(IMAGE):$(TAG)

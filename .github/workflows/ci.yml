@@ -1,0 +1,46 @@
+name: Anubis Main CD/CI
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  # Build Stage.
+  # Will build the docker image, and push it
+  # to the container registry.
+  build-web:
+    name: Build web
+    runs-on: ubuntu-latest
+    environment: anubis
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Log into DigitalOcean container registry
+        run: doctl registry login
+      - name: Build container image
+        run: make build
+      - name: Push image to registry
+        run: make push
+
+  # Deploy step.
+  # Will push out yaml to the k8s cluster, then restart
+  # deployments.
+  deploy:
+    name: Deploy to Anubis k8s cluster
+    needs: [build-web]
+    runs-on: ubuntu-latest
+    environment: anubis
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install doctl
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Save DigitalOcean kubeconfig
+        run: doctl kubernetes cluster kubeconfig save anubis
+      - name: Rollout restarts to deployments
+        run: kubectl rollout restart -n anubis deploy anubis-marketing-web

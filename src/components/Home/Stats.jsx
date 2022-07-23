@@ -40,6 +40,21 @@ const stats = [
     title: '99.9%',
     description: 'Semester Uptime.',
     iconIndex: 2,
+  },
+  {
+    title: '350,000+',
+    description: 'Automated Tests Per Semester.',
+    iconIndex: 0,
+  },
+  {
+    title: '80,000+',
+    description: 'Automated Build Per Semester.',
+    iconIndex: 1,
+  },
+  {
+    title: '50,000+',
+    description: 'Anubis Cloud IDEs Per Semester.',
+    iconIndex: 2,
   }
 ];
 

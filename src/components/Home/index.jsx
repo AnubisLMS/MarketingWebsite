@@ -6,17 +6,19 @@ import WithWithout from './WithWithout';
 import AppBlocks from "./AppBlocks";
 import CommunityShowcase from './CommunityShowcase';
 import InterestedBlock from "./InterestedBlock";
+import Stats from './Stats';
 
 const Home = () => {
   return (
     <Layout>
-      <Hero />
+      <Hero/>
+      <Stats/>
       <div id='educators'/>
-      <WithWithout />
+      <WithWithout/>
       <div id='students'/>
-      <AppBlocks />
-      <CommunityShowcase />
-      <InterestedBlock />
+      <AppBlocks/>
+      <CommunityShowcase/>
+      <InterestedBlock/>
     </Layout>
   )
 }

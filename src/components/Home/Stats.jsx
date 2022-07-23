@@ -5,12 +5,12 @@ import filterIcon from '../../images/icons/Filter.svg';
 
 const Stats = () => {
   return (
-    <div className='w-full mt-20'>
+    <div className='w-full mt-20 relative'>
       <div className='pb-xl pt-xl'>
         <div className='w-full grid grid-cols-3'>
           {stats.map((stat, index) => (
-            <div key = {`${index}-${stat.name}`} className={classes.stat}>
-              <img src ={icons[stat.iconIndex]} className = {classes.icon} />
+            <div key={`${index}-${stat.name}`} className={classes.stat}>
+              <img src={icons[stat.iconIndex]} className={classes.icon}/>
               <div>
                 <h2 className={classes.title}>{stat.title}</h2>
                 <p className={classes.desc}>{stat.description}</p>
@@ -20,7 +20,6 @@ const Stats = () => {
         </div>
       </div>
     </div>
-
   )
 }
 

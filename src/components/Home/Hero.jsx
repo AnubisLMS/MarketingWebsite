@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Stats from './Stats';
 import heroImage from '../../images/heroImage.png';
 
 const Hero = () => {
@@ -26,7 +25,6 @@ const Hero = () => {
           Get Started
         </button>
       </div>
-      <Stats />
     </div>
   )
 }

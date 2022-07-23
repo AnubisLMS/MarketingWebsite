@@ -5,7 +5,7 @@ import filterIcon from '../../images/icons/Filter.svg';
 
 const Stats = () => {
   return (
-    <div className='w-full mt-20 relative'>
+    <div className='w-full mt-20'>
       <div className='pb-xl pt-xl'>
         <div className='w-full grid grid-cols-3'>
           {stats.map((stat, index) => (

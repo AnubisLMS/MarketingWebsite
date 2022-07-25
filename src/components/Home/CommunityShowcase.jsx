@@ -4,7 +4,7 @@ const CommunityShowcase = () => {
   const [repo, setRepo] = useState(undefined);
 
   useEffect(() => {
-    fetch(`https://api.github.com/repos/GusSand/Anubis`, {method: "GET"})
+    fetch(`https://api.github.com/repos/AnubisLMS/Anubis`, {method: "GET"})
       .then((response) => response.json())
       .then((response) => {
         console.log(response);

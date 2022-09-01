@@ -19,11 +19,14 @@ const Hero = () => {
           </h1>
         </div>
         <p className='text-gray text-2xl w-3/4'>
-          Anubis is a Learning Management System that allows courses to provide consistent and customizable development environment for students. And completely automate the learning process.
+          Anubis is a Learning Management System that allows courses to provide consistent and customizable development
+          environment for students. And completely automate the learning process.
         </p>
-        <button className='pb-sm pt-sm bg-primary hover:opacity-90 rounded-sm w-48 text-xl'>
-          Get Started
-        </button>
+        <a href="https://anubis.osiris.services/api/public/auth/login" target="_blank">
+          <button className='pb-sm pt-sm bg-primary hover:opacity-90 rounded-sm w-48 text-xl'>
+            Get Started
+          </button>
+        </a>
       </div>
     </div>
   )

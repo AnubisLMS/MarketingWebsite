@@ -48,7 +48,7 @@ const stats = [
   },
   {
     title: '80,000+',
-    description: 'Automated Build Per Semester.',
+    description: 'Automated Builds Per Semester.',
     iconIndex: 1,
   },
   {

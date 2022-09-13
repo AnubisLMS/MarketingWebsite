@@ -11,7 +11,7 @@ const Footer = () => {
             <img className='h-9' src={logoImage} />
             <Link className='text-lg text-gray hover:text-white' to={'/team'}> Our Team</Link>
             <Link className='text-lg text-gray hover:text-white' to={'/getstarted'}> Get Started</Link>
-            <Link className='text-lg text-gray hover:text-white' to={'/blog'}> Blog </Link>
+            <Link className='text-lg text-gray hover:text-white' to={'https://anubis-lms.io/blog'}> Blog </Link>
           </div>
           <p className='text-lg text-gray'>Build by the Anubis Team</p>
         </div>

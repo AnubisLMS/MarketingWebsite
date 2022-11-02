@@ -13,7 +13,7 @@ const Footer = () => {
             <Link className='text-lg text-gray hover:text-white' to={'/getstarted'}> Get Started</Link>
             <Link className='text-lg text-gray hover:text-white' to={'https://anubis-lms.io/blog'}> Blog </Link>
           </div>
-          <p className='text-lg text-gray'>Build by the Anubis Team</p>
+          <p className='text-lg text-gray'>Built by the Anubis Team</p>
         </div>
       </div>
   )

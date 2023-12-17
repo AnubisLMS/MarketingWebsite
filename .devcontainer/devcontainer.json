@@ -1,0 +1,33 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+	"name": "Node.js",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+	"waitFor": "onCreateCommand",
+	"updateContentCommand": "cd marketing-website && npm install",
+	"postAttachCommand": "cd marketing-website && npm run dev",
+
+	"customizations": {
+        "vscode": {
+            "extensions": [
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"xabikos.JavaScriptSnippets",
+				"mgmcdermott.vscode-language-babel",
+				"streetsidesoftware.code-spell-checker",
+				"ms-vscode.js-debug-nightly",
+				"ms-vscode.vscode-typescript-next",
+				"ms-vscode-remote.remote-containers",
+				"GitHub.copilot",
+				"GitHub.copilot-chat"
+			]
+        }
+    },
+	"portsAttributes": {
+        "3000": {
+            "label": "WebApp",
+            "onAutoForward": "openPreview"
+        }
+    },
+	"forwardPorts": [3000]
+}

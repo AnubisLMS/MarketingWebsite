@@ -1,7 +1,11 @@
 import Image from 'next/image'
+import Header from '../components/header'
+
 
 export default function Home() {
   return (
-    <div className='text-sky-400'> THIS IS A TEST</div>
+    <div> THIS IS A TEST
+    <Header/>
+    </div>
   )
 }

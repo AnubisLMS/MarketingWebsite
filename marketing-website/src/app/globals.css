@@ -6,6 +6,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0D1117;
+    /* background-color: #0D1117; */
     font-family: "Work Sans", sans-serif;
 }

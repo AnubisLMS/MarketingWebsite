@@ -1,5 +1,4 @@
 import "./globals.css";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter'; 
 
 export const metadata = {
   title: "Anubis LMS",
@@ -9,9 +8,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
-      <body>
-      <AppRouterCacheProvider options={{ enableCssLayer: true }}>{children}</AppRouterCacheProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

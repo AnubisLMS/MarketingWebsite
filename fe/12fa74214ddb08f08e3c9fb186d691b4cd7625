@@ -1,0 +1,14 @@
+Dockerfile
+  h_b5fa7634886143 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "fe12fa74214ddb08f08e3c9fb186d691b4cd7625",
+  "prompts": {},
+  "humans": {
+    "h_b5fa7634886143": {
+      "author": "John McCann Cunniff Jr <johncunniff1248@gmail.com>"
+    }
+  }
+}

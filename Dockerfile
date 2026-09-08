@@ -6,6 +6,7 @@ ENV GENERATE_SOURCEMAP=false
 WORKDIR /opt/app
 COPY package.json yarn.lock /opt/app/
 RUN set -ex; \
+  apk add lscpu; \
   yarn global add gatsby; \
   yarn install --frozen-lockfile; \
   gatsby telemetry --disable; \

@@ -1,0 +1,19 @@
+Dockerfile
+  s_0d4d57336f63c3::t_7b3c82f9407708 5-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "c542b00d11e0f7c60e2caf26cdd85b48781b20f2",
+  "prompts": {},
+  "sessions": {
+    "s_0d4d57336f63c3": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4cb82a66-bf59-42bf-bd5f-0d89a63b3962",
+        "model": "unknown"
+      },
+      "human_author": "John McCann Cunniff Jr <johncunniff1248@gmail.com>"
+    }
+  }
+}

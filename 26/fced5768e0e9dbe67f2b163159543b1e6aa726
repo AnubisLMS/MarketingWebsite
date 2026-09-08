@@ -1,0 +1,18 @@
+gatsby-config.js
+  h_b5fa7634886143 3
+src/components/Header/index.jsx
+  h_b5fa7634886143 15
+src/components/Home/Hero.jsx
+  h_b5fa7634886143 25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "26fced5768e0e9dbe67f2b163159543b1e6aa726",
+  "prompts": {},
+  "humans": {
+    "h_b5fa7634886143": {
+      "author": "John McCann Cunniff Jr <johncunniff1248@gmail.com>"
+    }
+  }
+}

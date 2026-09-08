@@ -12,7 +12,7 @@ const Header = () => {
           <Nav/>
         </div>
         <div>
-          <a href="https://anubis.osiris.services/api/public/auth/login" target="_blank">
+          <a href="https://anubis-lms.io/api/public/auth/login" target="_blank">
             <button className='pb-sm pt-sm pl-md pr-md bg-primary rounded-sm hover:opacity-90'>
               Sign In
             </button>

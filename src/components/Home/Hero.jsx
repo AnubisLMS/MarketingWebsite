@@ -22,7 +22,7 @@ const Hero = () => {
           Anubis is a Learning Management System that allows courses to provide consistent and customizable development
           environment for students. And completely automate the learning process.
         </p>
-        <a href="https://anubis.osiris.services/api/public/auth/login" target="_blank">
+        <a href="https://anubis-lms.io/api/public/auth/login" target="_blank">
           <button className='pb-sm pt-sm bg-primary hover:opacity-90 rounded-sm w-48 text-xl'>
             Get Started
           </button>

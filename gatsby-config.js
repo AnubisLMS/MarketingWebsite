@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://anubis.osiris.services",
+    siteUrl: "https://anubis-lms.io",
     title: "Anubis",
   },
   plugins: [

@@ -1,4 +1,4 @@
-FROM node:16-alpine as build
+FROM node:22-alpine as build
 
 ENV GATSBY_CPU_COUNT=4
 ENV GENERATE_SOURCEMAP=false

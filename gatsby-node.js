@@ -1,5 +1,15 @@
 const path = require("path")
 
+// Webpack still defaults output.hashFunction to md4 (a wasm build, since 5.61).
+// xxhash64 is faster and built in; not required to build, but keeps us off md4.
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    output: {
+      hashFunction: "xxhash64",
+    },
+  })
+}
+
 // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
 exports.createPages = async ({ graphql, actions, reporter }) => {

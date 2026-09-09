@@ -2,8 +2,6 @@ FROM node:22-alpine as build
 
 ENV GATSBY_CPU_COUNT=4
 ENV GENERATE_SOURCEMAP=false
-# Gatsby 3's webpack hashes with md4, which OpenSSL 3 (node 17+) rejects by default
-ENV NODE_OPTIONS=--openssl-legacy-provider
 
 WORKDIR /opt/app
 COPY package.json yarn.lock /opt/app/
